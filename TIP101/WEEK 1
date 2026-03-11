@@ -1,5 +1,29 @@
-# (Session 1 Version 1)
+# (Session 1 Version 2) 
+"""
+Question 3
+Create a function that creates and returns a list ans, that is the concatenation of two nums lists
+"""
+def concatenate_list(nums):
+    return 2*nums
 
-# (Session 1 Version 2)
+nums = [1, 2, 3, 4]
+print(concatenate_list(nums))
 
-print("here")
+"""
+Question 5
+Write a function calculate_tip() that takes in a float bill and a string service_quality as parameters.
+If service_quality is "poor", the function should return 10% of the bill value.
+If service_quality is "average", the function should return 15% of the bill value.
+If service_quality is "excellent", the function should return 20% of the bill value.
+If service_quality is any other value, the function should return None.
+"""
+def calculate_tip(bill, service_quality):
+    pass
+
+tip1 = calculate_tip(44.53, "average")
+print(tip1)
+tip2 = calculate_tip(44.53, "poor")
+print(tip2)
+tip3 = calculate_tip(44.53, "excellent")
+print(tip3)
+
