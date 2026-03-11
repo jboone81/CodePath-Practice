@@ -18,7 +18,12 @@ If service_quality is "excellent", the function should return 20% of the bill va
 If service_quality is any other value, the function should return None.
 """
 def calculate_tip(bill, service_quality):
-    pass
+    if service_quality == "average":
+        return (bill * .15)
+    elif service_quality == "poor":
+        return (bill * .1)
+    elif service_quality == "excellent":
+        return (bill * .2)
 
 tip1 = calculate_tip(44.53, "average")
 print(tip1)
@@ -27,3 +32,17 @@ print(tip2)
 tip3 = calculate_tip(44.53, "excellent")
 print(tip3)
 
+"""
+Question 10:
+Write a function that returns the value of the base number to the power of the exponent
+"""
+def power(base, exponent):
+    num = 1
+    for x in range(exponent):
+        num = num*base
+    return num
+
+pow1 = power(2,5)
+print(pow1)
+pow2 = power(3,3)
+print(pow2)
