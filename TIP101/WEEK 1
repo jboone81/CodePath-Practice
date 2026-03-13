@@ -36,13 +36,28 @@ print(tip3)
 Question 10:
 Write a function that returns the value of the base number to the power of the exponent
 """
-def power(base, exponent):
+def power(base, exponent): # iterative
     num = 1
     for x in range(exponent):
         num = num*base
     return num
 
+def power(base, exponent):
+
+
 pow1 = power(2,5)
 print(pow1)
 pow2 = power(3,3)
 print(pow2)
+
+"""
+Question 12:
+Write a function factorial() that takes in an integer n as a parameter and 
+returns its factorial. The factorial of a number is the product of all positive 
+integers less than or equal to that number. For example, the factorial of 5 
+(denoted as 5!) is 5! = 5 * 4 * 3 * 2 * 1 which equals 120.
+"""
+
+def factorial(n):
+    pass
+
