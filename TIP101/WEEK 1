@@ -42,8 +42,7 @@ def power(base, exponent): # iterative
         num = num*base
     return num
 
-def power(base, exponent):
-
+# go back over and try recursively
 
 pow1 = power(2,5)
 print(pow1)
@@ -59,5 +58,42 @@ integers less than or equal to that number. For example, the factorial of 5
 """
 
 def factorial(n):
+    product = 1
+    for x in range(n):
+        product *= x+1
+    return product    
+
+print(factorial(7))
+
+"""
+Question 13:
+Write a function squares() that takes a list of integers nums as a parameter and 
+returns a new list containing the square of each number in the original list.
+"""
+
+def squares(nums): # method modifying in place
+    for number in range(len(nums)): # interate through the list
+        nums[number] = nums[number] * nums[number]
+    return nums
+
+def squares(nums): # method creating new list
+    new_list = []
+    for number in nums:
+        new_list.append(number*number)
+    return new_list 
+
+nums = [1, 2, 3, 4, 17]
+print(squares(nums))
+
+"""
+Question 14:
+Write a function multiply_list() that takes in a list of integers lst and an integer 
+multiplier as parameters. The function returns a new list containing each value in 
+lst multiplied by multiplier.
+"""
+
+def multiply_list(lst, multiplier):
     pass
 
+lst = [1,2,3]
+new_lst = multiply_list(lst, 3)
