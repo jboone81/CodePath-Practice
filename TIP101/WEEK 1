@@ -92,8 +92,60 @@ multiplier as parameters. The function returns a new list containing each value 
 lst multiplied by multiplier.
 """
 
-def multiply_list(lst, multiplier):
-    pass
+def multiply_list(lst, multiplier): # method creating a new list
+    newer_lst = []
+    for num in lst:
+        newer_lst.append(num*multiplier)
+    print(newer_lst)
 
 lst = [1,2,3]
 new_lst = multiply_list(lst, 3)
+
+
+# Session 2 Version 2
+
+"""
+Question 5:
+Write a function find_missing() that takes in a list nums containing n unique numbers in 
+the range [0,n]. The function returns the only number in the range that is missing from the list.
+"""
+
+def find_missing(nums):
+    nums.sort() # sort the number
+    for index in range(len(nums)):
+        if index != nums[index]: # compare the index value, to the value that is currently there
+            return index
+    return None
+
+nums = [2,4,1,0,5]
+missing_num = find_missing(nums)
+print(missing_num)
+
+"""
+Question 6:
+Write a function reverse_list() that takes in a list lst as a parameter and returns a new 
+list containing the elements of lst in reverse order.
+"""
+def reverse_list(lst):
+    return lst[::-1] # checking to see if I remembered :)
+
+lst = [1,2,3,4,5]
+rev_lst = reverse_list(lst)
+print(rev_lst)
+
+"""
+Question 9:
+Write a function list_to_number() that takes in a list digits where each item is a digit between 
+0-9. The function returns the number they represent when combined.
+"""
+
+def list_to_number(digits):
+    new = ""
+    for item in digits:
+        new += str(item) # changes num into str so that it works
+
+    return new
+
+digits = [1,0,3]
+number = list_to_number(digits)
+print(number)
